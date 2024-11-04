@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CredentialManager</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div id="main">
+                <div class="logo-landing">
+                    <img src="assets\blue logo.png" alt="HAUthentiCred Logo" class="logo-img">
+                    <h1>HAUthentiCred</h1>
+                </div>
+                <div id="connectWallet">
+                    <button id="connectButton" class="connect-btn">Connect to MetaMask</button>
+                </div>
+
+                <div id="profileSetup" class="hidden">
+                    <h2>Set Up Your Profile</h2>
+                    <select id="userType">
+                        <option value="student">Student</option>
+                        <option value="professor">Professor</option>
+                    </select>
+                    <input type="text" id="userName" placeholder="Your Name">
+                    <input type="text" id="userIdNumber" placeholder="ID Number">
+                    <button id="saveProfile">Save Profile</button>
+                </div>
+
+                <div id="studentPortal" class="hidden">
+                    <h2>Student Portal</h2>
+                    <button id="addCredentialBtn">Add Credential</button>
+                    <button id="viewCredentialsBtn">View Credentials</button>
+                    <button id="viewPendingCredentialsBtn">View Pending Credentials</button>
+                    <button id="logoutBtn">Logout</button>
+
+                    <div id="addCredentialForm" class="hidden">
+                        <h3>Add New Credential</h3>
+                        <input type="text" id="credentialName" placeholder="Credential Name">
+                        <input type="text" id="organization" placeholder="Organization">
+                        <input type="date" id="dateIssued">
+                        <input type="text" id="ipfsHash" placeholder="IPFS Hash">
+                        <button id="submitCredential">Submit Credential</button>
+                    </div>
+
+                    <div id="credentialsList" class="hidden">
+                        <h3>Your Credentials</h3>
+                        <table id="credentialsTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Organization</th>
+                                    <th>Date Issued</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="professorPortal" class="hidden">
+                    <h2>Professor Portal</h2>
+                    <button id="viewPendingVerificationsBtn">View Pending Verifications</button>
+                    <button id="viewVerifiedCredentialsBtn">View Verified Credentials</button>
+                    <button id="logoutBtnProf">Logout</button>
+
+                    <div id="pendingVerificationsList" class="hidden">
+                        <h3>Pending Verifications</h3>
+                        <table id="pendingVerificationsTable">
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Credential Name</th>
+                                    <th>Organization</th>
+                                    <th>Date Issued</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <div id="verifiedCredentialsList" class="hidden">
+                        <h3>Verified Credentials</h3>
+                        <table id="verifiedCredentialsTable">
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Credential Name</th>
+                                    <th>Organization</th>
+                                    <th>Date Issued</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <img src="assets/white logo.png" alt="Security Icon">
+            <div class="slogan"><span style="font-weight: 100;">Secure Your Future</span><br><span
+                    style="font-size: 30px;">One
+                    Block at a Time.</span></div>
+        </div>
+    </div>
+
+    <script src="app.js">
+    </script>
+</body>
+
+</html>

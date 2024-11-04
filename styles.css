@@ -1,0 +1,181 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left-panel {
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-panel {
+    flex: 1;
+    height: 100%;
+    background-color: #1a2b4a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    /* Set the right-panel as the reference for absolute positioning */
+    text-align: center;
+    overflow: hidden;
+}
+
+.right-panel img {
+    position: absolute;
+    /* Allows the image to be positioned relative to the right-panel */
+    top: -80px;
+    /* Adjust this value to control how much the image overlaps */
+    right: -325px;
+    /* Adjust to move the image to the right */
+    width: 800px;
+    /* Set a width for the image (adjust as needed) */
+    height: auto;
+    border-radius: 50%;
+    /* Optional: circular image */
+    z-index: 10;
+    /* Ensures the image stays on top of other content */
+}
+
+.right-panel .slogan {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    text-align: left;
+    line-height: 30px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-landing {
+    display: flex;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto;
+    /* Adjust size as needed */
+    margin-right: 10px;
+    /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1a2b4a;
+}
+
+h1 {
+    font-size: 5rem;
+    padding-top: 20px;
+    margin: 20px 0;
+}
+
+#connectWallet {
+    /* display: flex; */
+    justify-content: center;
+}
+
+.connect-btn {
+    background-color: #1a2b4a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 30px;
+    
+}
+
+.slogan {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #1a2b4a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1a2b4a;
+    color: white;
+}
+
+/* Improved input tag styling */
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #1a2b4a;
+    box-shadow: 0 0 5px rgba(26, 43, 74, 0.3);
+    outline: none;
+}
